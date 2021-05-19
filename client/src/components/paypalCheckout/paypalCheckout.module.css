@@ -1,0 +1,21 @@
+#signUpForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 40%;
+}
+
+#mainTitle {
+    font-family: 'Inter';
+    font-size: 25px;
+    color: black;
+    letter-spacing: 0.4px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+#paypalContainer {
+    width: 352px;
+    margin-top: 50px;
+}

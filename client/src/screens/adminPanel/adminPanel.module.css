@@ -1,0 +1,36 @@
+#imagePreview {
+    height: 300px;
+    width: 300px;
+    border-radius: 16px;
+    background-size: cover;
+    background-position: center;
+}
+
+#mainDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+
+.selectBtn {
+    background:  #003e4f;
+    border: none;
+    border-radius: 8px;
+    padding: 15px;
+    min-width: 100px;
+    font-family: 'AvenirBlack';
+    color: white;
+    font-size: 17px;
+    margin: 0px 15px;
+}
+
+#question {
+    font-family: 'Avenir';
+    color: #003e4f;
+    margin-bottom: 20px;
+}
+
+#btnDiv {
+    margin-top: 20px;
+}

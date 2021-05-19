@@ -1,0 +1,63 @@
+#welcome {
+    margin-top: 50px;
+    font-family: 'AvenirBlack';
+}
+
+#mainTitle {
+    color: #003e4f;
+    font-size: 40px;
+}
+
+#mainSpan {
+    color: white;
+    background-color: #003e4f;
+    font-family: 'Avenir';
+    padding: 5px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.shareBtn {
+    font-family: 'Avenir';
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    background-color: #F3F4F9;
+    color: #57585A;
+    padding: 12px;
+    margin: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: none;
+    transition: 0.2s;
+}
+
+.shareBtn:hover {
+    background-color: #e9eaef;
+}
+
+#twitter {
+    color: #1DA1F2;
+    font-size: 25px;
+    margin-right: 10px;
+    margin-bottom: 2.5px;
+}
+
+#facebook {
+    color: #3177F2;
+    font-size: 25px;
+    margin-right: 10px;
+    margin-bottom: 2.5px;
+}
+
+#interviewContainer {
+    background-color: #F3F4FA;
+    margin-top: 100px;
+    justify-content: center;
+    padding: 125px 0px 100px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}

@@ -1,0 +1,76 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  color: #57585a;
+}
+
+h1 {
+  font-size: 2em !important;
+  margin: 0px !important;
+}
+
+h2 {
+  font-size: 1.5em !important;
+}
+
+h3 {
+  font-size: 1.17em !important;
+}
+
+h4 {
+  font-size: 1em !important;
+}
+
+h5 {
+  font-size: .83em !important;
+}
+
+h6 {
+  font-size: .67 !important;
+}
+
+input {
+  outline: none;
+}
+
+@font-face {
+  font-family: 'SpaceMono';
+  src: url('./fonts/SpaceMono-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('./fonts/Avenir.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'AvenirBlack';
+  src: url('./fonts/AvenirLTStd-Black.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./fonts/Inter-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'InterLight';
+  src: url('./fonts/Inter-Medium.ttf') format('truetype');
+}
+
+.justifyBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.alignCenter {
+  display: flex;
+  align-items: center;
+}
+
+.displayFlexColumn {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}

@@ -1,0 +1,13 @@
+#userProfile {
+    background: #003e4f;
+    color: white;
+}
+
+#mainTitle {
+    font-family: 'AvenirBlack';
+}
+
+#data {
+    padding: 0px 50px;
+    margin-top: 50px;
+}

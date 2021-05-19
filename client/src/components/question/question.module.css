@@ -1,0 +1,34 @@
+#card {
+    min-width: 60%;
+    max-width: 60%;
+    text-align: center;
+    margin: 10px 0px;
+    border-bottom: 1px solid rgb(214, 214, 214);
+}
+
+#toggle {
+    border: none;
+    background-color: transparent;
+    font-family: 'AvenirBlack';
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+}
+
+#cardBody {
+    font-family: 'Avenir';
+    font-size: 17px;
+}
+
+#checkBtn {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'AvenirBlack';
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 100;
+}

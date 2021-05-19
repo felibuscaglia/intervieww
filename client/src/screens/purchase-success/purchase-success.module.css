@@ -1,0 +1,37 @@
+#welcomeSpan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: 'AvenirBlack';
+    color: white;
+    font-size: 40px;
+    background-color: #003e4f;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    padding: 50px 0px;
+}
+
+#link {
+    color: white;
+    text-decoration: none;
+}
+
+#startBtn {
+    background: white;
+    color: #003e4f;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 1px solid white;
+    margin-top: 50px;
+    font-size: 30px;
+    transition: .4s;
+}
+
+#startBtn:hover {
+    background: transparent;
+    color: white;
+}

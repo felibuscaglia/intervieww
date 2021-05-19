@@ -1,0 +1,86 @@
+#cover {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    z-index: -10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'AvenirBlack';
+    text-align: center;
+}
+
+.statTitle {
+    margin: 0px;
+    margin-bottom: 5px;
+}
+
+#topicImg {
+    height: 264px;
+    width: 264px;
+    border-radius: 16px;
+    background-size: cover;
+    background-position: center;
+    margin-top: 110px;
+}
+
+.infoSpan {
+    font-family: 'Avenir';
+}
+
+#statsDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.innerStats {
+    width: 100%;
+}
+
+#questionsDiv {
+    margin-top: 550px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+
+#startPractice {
+    background: transparent;
+    border: none;
+    padding: 20px 40px;
+    border-radius: 8px;
+    font-family: 'Avenir';
+    font-size: 20px;
+    margin-top: 150px;
+    transition: .4s;
+}
+
+#startPractice:hover {
+    transform: scale(1.03);
+}
+
+#pathMainDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+#pathCover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -100px;
+    font-family: 'AvenirBlack';
+}
+
+#topicsDiv {
+    margin-top: 50px;
+    justify-content: center;
+    padding: 100px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}

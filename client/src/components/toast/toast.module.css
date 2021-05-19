@@ -1,0 +1,23 @@
+#toast {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+}
+
+#leftToast {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+}
+
+#header {
+    color: #003e4f;
+    font-family: 'AvenirBlack';
+}
+
+#body {
+    background: #003e4f;
+    color: white;
+    font-family: 'Avenir';
+    opacity: 75%;
+}

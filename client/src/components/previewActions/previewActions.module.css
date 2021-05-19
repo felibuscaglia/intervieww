@@ -1,0 +1,27 @@
+#dropdown {
+    align-self: flex-end;
+}
+
+#dropdownToggle {
+    background: transparent;
+    border: none;
+    outline: none;
+    border-top-right-radius: 16px;
+}
+
+#dropdownToggle::before {
+    display: none;
+}
+
+#ellipsis {
+    font-size: 20px;
+}
+
+.link {
+    color: black;
+}
+
+.link:hover {
+    text-decoration: none;
+    color: black;
+}

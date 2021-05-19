@@ -1,0 +1,44 @@
+#logo {
+    height: 35px;
+}
+
+#signupHeader {
+    padding: 15px;
+}
+
+#loginBtn {
+    background-color: white;
+    border: none;
+    font-family: 'Avenir';
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    color: #003e4f;
+    margin-right: 20px;
+    height: 45px;
+    width: 87px;
+    border-radius: 16px;
+}
+
+#mainDiv {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: -10;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+#prosDiv {
+    background: #003e4f;
+    width: 60%;
+    height: 100%;
+}
+
+#prosDivLogin {
+    background-image: url('https://images.unsplash.com/photo-1535551951406-a19828b0a76b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1646&q=80');
+    background-size: cover;
+    width: 60%;
+    height: 100%;
+}

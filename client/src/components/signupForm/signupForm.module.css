@@ -1,0 +1,99 @@
+#signUpForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 40%;
+}
+
+#mainTitle {
+    font-family: 'Inter';
+    font-size: 25px;
+    color: black;
+    letter-spacing: 0.4px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.inputDiv {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+    align-items: flex-start;
+}
+
+.label {
+    font-family: 'InterLight';
+    font-size: 14px;
+    letter-spacing: 0.4px;
+    color: #9e9d9d;
+    margin: 0px 0px 5px 5px;
+}
+
+.signUpInput {
+    font-family: 'InterLight';
+    font-size: 14px;
+    letter-spacing: 0.4px;
+    background: #FBFCFC;
+    color: #57585A;
+    height: 48px;
+    width: 352px;
+    border: 1px solid #E9EAEF;
+    padding: 0px 16px 0px 16px;
+    border-radius: 8px;
+    overflow: auto;
+    transition: .4s;
+}
+
+.signUpInput::placeholder {
+    color: #bbbaba;
+}
+
+#privacy {
+    margin: 10px 0px;
+}
+
+.span {
+    font-family: 'InterLight';
+    font-size: 12px;
+    color: #bbbaba;
+    letter-spacing: .4px;
+}
+
+#link {
+    color: #bbbaba;
+    text-decoration: underline;
+}
+
+#checkoutBtn {
+    font-family: 'InterLight';
+    font-size: 14px;
+    letter-spacing: .4px;
+    background: #003e4f;
+    color: white;
+    height: 48px;
+    width: 352px;
+    margin-top: 16px;
+    padding: 14px 24px 14px 24px;
+    border-radius: 16px;
+    border: none;
+    transition: .4s;
+}
+
+#checkoutBtn:hover {
+    background-color: #1e5666;
+}
+
+#checkoutBtn:disabled {
+    cursor: not-allowed;
+    background-color:rgb(90, 102, 105);
+}
+
+#login {
+    margin-top: 30px;
+}
+
+#loginLink {
+    text-decoration: underline;
+    color: #57585A;
+}

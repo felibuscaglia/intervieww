@@ -1,0 +1,30 @@
+#userAvatar {
+    height: 25px;
+    width: 25px;
+    background-size: contain;
+}
+
+#dropdownToggle {
+    display: flex;
+    align-items: center;
+    background-color: #003e4f;
+}
+
+#dropdownToggle:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+.dropdownItem {
+    font-family: 'Avenir';
+    text-align: right;
+}
+
+.link {
+    color: black;
+}
+
+.link:hover {
+    color: black;
+    text-decoration: none;
+}
