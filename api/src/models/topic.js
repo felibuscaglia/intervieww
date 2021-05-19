@@ -22,11 +22,11 @@ module.exports = (sequelize) => {
             allowNull: false
         },
         jobOpenings: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false
         },
         averageSalary: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false
         }
     }, {

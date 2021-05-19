@@ -1,0 +1,66 @@
+#mainDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #003e4f;
+    font-family: 'Avenir';
+    text-align: center;
+}
+
+#mainTitle {
+    font-family: 'AvenirBlack';
+    color: white;
+    background-color: #003e4f;
+    width: 300px;
+    padding: 7.5px 5px; 
+    margin-bottom: 50px;
+}
+
+#inputDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.input {
+    border: none;
+    border-bottom: 1px solid #003e4f;
+    font-size: 17.5px;
+    min-width: 300px;
+    margin: 10px 0px;
+}
+
+.input::placeholder {
+    color: #003e4f;
+}
+
+.numberInput {
+    border: none;
+    border-bottom: 1px solid #003e4f;
+    font-size: 17.5px;
+    max-width: 140px;
+    margin: 10px;
+}
+
+.numberInput::placeholder {
+    color: #003e4f;
+}
+
+#postItBtn {
+    border: none;
+    font-family: 'AvenirBlack';
+    color: #003e4f;
+    border: 1px solid #003e4f;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 8px;
+    width: 300px;
+    transition: .4s;
+    margin-top: 50px;
+}
+
+#postItBtn:hover {
+    color: white;
+    background-color: #003e4f;
+}

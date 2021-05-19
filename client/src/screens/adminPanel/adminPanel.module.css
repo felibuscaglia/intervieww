@@ -34,3 +34,16 @@
 #btnDiv {
     margin-top: 20px;
 }
+
+#previewInput {
+    border: none;
+    border-bottom: 2px solid #003e4f;
+    font-family: 'Avenir';
+    font-size: 17.5px;
+    min-width: 200px;
+    margin-top: 20px;
+}
+
+#previewInput::placeholder {
+    color: #003e4f;
+}
