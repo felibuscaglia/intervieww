@@ -32,7 +32,7 @@ function PathPage({ pathId, user }) {
                 <h1>{path.title}</h1>
                 <div id={style.topicsDiv} style={{ color: colorBrightness }}>
                     {path.topics && path.topics.map(topicPath => {
-                        const isCompleted = user.topics.find(topic => topic.id === topicPath.id && topic.userXtopics.state === 'isFinished');
+                        const isCompleted = user.topics && user.topics.find(topic => topic.id === topicPath.id && topic.userXtopics.state === 'isFinished');
                         return <Preview isPathPage={true} topic={topicPath} mainColor={colorBrightness} isCompleted={Boolean(isCompleted)} />
                     })}
                 </div>

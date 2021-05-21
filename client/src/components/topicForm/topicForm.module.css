@@ -7,6 +7,16 @@
     text-align: center;
 }
 
+#mainDivQuestion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #003e4f;
+    font-family: 'Avenir';
+    text-align: center;
+    width: 100%;
+}
+
 #mainTitle {
     font-family: 'AvenirBlack';
     color: white;
@@ -33,6 +43,10 @@
 
 .input::placeholder {
     color: #003e4f;
+}
+
+#questionInput {
+    margin-right: 50px;
 }
 
 .numberInput {
@@ -63,4 +77,73 @@
 #postItBtn:hover {
     color: white;
     background-color: #003e4f;
+}
+
+#icon {
+    font-size: 30px;
+    align-self: flex-start;
+    cursor: pointer;
+    color: #003e4f;
+}
+
+#questionIcon {
+    font-size: 30px;
+    align-self: flex-start;
+    cursor: pointer;
+    color: #003e4f;
+    margin-left: 50px;
+}
+
+.typeahead {
+    width: 300px;
+    margin: 20px 0px;
+}
+
+#selectedSkillsContainer {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 300px;
+    justify-content: center;
+}
+
+#previewInput {
+    border: none;
+    border-bottom: 2px solid #003e4f;
+    font-family: 'Avenir';
+    font-size: 17.5px;
+    min-width: 200px;
+    margin-top: 20px;
+}
+
+#previewInput::placeholder {
+    color: #003e4f;
+}
+
+#imagePreview {
+    height: 300px;
+    width: 300px;
+    border-radius: 16px;
+    background-size: cover;
+    background-position: center;
+}
+
+#selectDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#label {
+    margin: 35px 0px 5px 0px;
+    font-family: 'AvenirBlack';
+}
+
+#select {
+    border: none;
+    border-bottom: 1px solid #003e4f;
+    font-size: 17.5px;
+    min-width: 300px;
+    margin: 10px 0px;
+    color: #003e4f;
 }

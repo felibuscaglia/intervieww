@@ -1,0 +1,15 @@
+#selectedTopic {
+    color: white;
+    background-color: #003e4f;
+    padding: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 6px;
+    margin: 5px;
+}
+
+#icon {
+    font-size: 15px;
+    margin-right: 4px;
+    cursor: pointer;
+}

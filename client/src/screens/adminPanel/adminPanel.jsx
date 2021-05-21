@@ -1,20 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import style from './adminPanel.module.css';
 import Header from '../../components/header/header';
 import TopicForm from '../../components/topicForm/topicForm';
+import PathForm from '../../components/pathForm/pathForm';
+import QuestionForm from '../../components/questionForm/questionForm';
+import { connect } from 'react-redux';
+import { getTopics } from '../../redux/actions/index';
 
 function AdminPanel() {
     const [selectedOption, setSelectedOption] = useState(null);
-    const [mainImage, setMainImage] = useState('https://images.unsplash.com/photo-1579546929662-711aa81148cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80');
 
+    useEffect(() => {
+     getTopics();   
+    }, []);
+    
     return (
         <div>
             <Header fontColor={'#003e4f'} />
             <div id={style.mainDiv}>
-                <div className='displayFlexColumn'>
-                    <div style={{ backgroundImage: `url(${mainImage})` }} id={style.imagePreview}></div>
-                    <input onChange={(e) => setMainImage(e.target.value)} id={style.previewInput} placeholder='Image url...' />
-                </div>
                 {selectedOption === null &&
                     <div className='displayFlexColumn'>
                         <h1 id={style.question}>What do you want to post?</h1>
@@ -25,10 +28,18 @@ function AdminPanel() {
                         </div>
                     </div>
                 }
-                {selectedOption === 'Topic' && <TopicForm mainImage={mainImage} />}
+                {selectedOption === 'Topic' && <TopicForm setSelectedOption={setSelectedOption} />}
+                {selectedOption === 'Path' && <PathForm setSelectedOption={setSelectedOption} />}
+                {selectedOption === 'Question' && <QuestionForm setSelectedOption={setSelectedOption} />}
             </div>
         </div>
     )
 }
 
-export default AdminPanel;
+function mapDispatchToProps(dispatch) {
+    return {
+        getTopics: () => dispatch(getTopics())
+    }
+}
+
+export default connect(null, mapDispatchToProps)(AdminPanel);
