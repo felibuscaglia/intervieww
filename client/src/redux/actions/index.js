@@ -5,6 +5,15 @@ export const LOG_OUT = 'LOG_OUT';
 export const SET_TOPICS = 'SET_TOPICS';
 export const REMOVE_TOPIC = 'REMOVE_TOPIC';
 export const DISPLAY_TOAST = 'DISPLAY_TOAST';
+export const SET_SUGGESTIONS = 'SET_SUGGESTIONS';
+
+export function getSuggestions(query) {
+    return function (dispatch) {
+        axios.get(`/search?query=${query}`)
+            .then (suggestions => dispatch({ type: SET_SUGGESTIONS, payload: suggestions.data }))
+            .catch(err => console.error(err))
+    }
+}
 
 export function setUser(user) {
     return { type: SET_USER, payload: user };

@@ -1,19 +1,26 @@
-import { SET_USER, LOG_OUT, SET_TOPICS, REMOVE_TOPIC, DISPLAY_TOAST } from '../actions/index';
+import { SET_USER, LOG_OUT, SET_TOPICS, REMOVE_TOPIC, DISPLAY_TOAST, SET_SUGGESTIONS } from '../actions/index';
 
 const initialState = {
     user: {},
     topics: [],
-    showToast: false
+    showToast: false,
+    suggestions: []
 };
 
 function rootReducer(state = initialState, action) {
     switch (action.type) {
+        case SET_SUGGESTIONS:
+            return {
+                ...state,
+                suggestions: action.payload
+            }
+
         case SET_USER:
             return {
                 ...state,
                 user: action.payload
             }
-        
+
         case LOG_OUT:
             return {
                 ...state,

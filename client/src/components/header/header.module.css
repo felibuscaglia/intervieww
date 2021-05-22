@@ -8,3 +8,16 @@
     height: 50px;
     margin-right: 10px;
 }
+
+#searchInput {
+    margin-right: 25px;
+    font-size: 16px;
+    font-family: 'Avenir';
+    text-indent: 0.1px;
+    color: #1C1C1C;
+    height: 36px;
+    width: 300px;
+    padding: 8px 8px 8px 14px;
+    border-radius: 100px;
+    border: none;
+}

@@ -29,9 +29,7 @@ function Question({ question, index, topic, user, isCompleted }) {
                 <Card.Body id={style.cardBody}>
                     {isCompletedState === undefined && <Link to='/signup'><button style={{ background: topic.color, color: fontColor }} id={style.checkBtn}>Unlock the answer</button></Link>}
                     {!isCompletedState && isCompletedState !== undefined && <button onClick={ completeQuestion } style={{ background: topic.color, color: fontColor }} id={style.checkBtn}>Check your answer</button>}
-                    <div style={{ filter: `blur(${user.name && isCompletedState ? '0px' : '4px'})`, WebkitFilter: `blur(${user.name && isCompletedState ? '0px' : '4px'})` }}>
-                        {question.answer}
-                    </div>
+                    <div dangerouslySetInnerHTML={{ __html: question.answer }} style={{ filter: `blur(${user.name && isCompletedState ? '0px' : '4px'})`, WebkitFilter: `blur(${user.name && isCompletedState ? '0px' : '4px'})` }}></div>
                 </Card.Body>
             </Accordion.Collapse>
         </Card>

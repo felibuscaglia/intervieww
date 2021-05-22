@@ -47,7 +47,7 @@ function TopicPage({ topicId, addTopicToUser, user }) {
                 <div id={style.statsDiv}>
                     <div className={style.innerStats}>
                         <h2 className={style.statTitle}>{topic.famousApps}</h2>
-                        <span className={style.infoSpan}>Famous apps using it</span>
+                        <span className={style.infoSpan}>Who uses it?</span>
                     </div>
                     <div className={style.innerStats}>
                         <h2 className={style.statTitle}>
