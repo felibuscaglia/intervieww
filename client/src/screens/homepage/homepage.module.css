@@ -1,11 +1,10 @@
 #welcome {
-    margin-top: 50px;
+    margin: 50px 0px;
     font-family: 'AvenirBlack';
 }
 
 #mainTitle {
     color: #003e4f;
-    font-size: 40px;
 }
 
 #mainSpan {
@@ -52,12 +51,48 @@
     margin-bottom: 2.5px;
 }
 
-#interviewContainer {
+#mainContainer {
     background-color: #F3F4FA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#interviewContainer {
     margin-top: 100px;
     justify-content: center;
-    padding: 125px 0px 100px 0px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+}
+
+#blurredContainer {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    filter: blur(4px);
+    -webkit-filter: blur(8px);
+}
+
+#unlock {
+    color: #9c9c9c;
+    margin-bottom: 50px;
+    font-size: 25px;
+}
+
+#link {
+    color: #003e4f;
+}
+
+#link:hover {
+    text-decoration: none;
+}
+
+#mainNonUserContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0px 100px 0px;
+    font-family: 'AvenirBlack';
 }

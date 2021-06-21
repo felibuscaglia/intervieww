@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 
-function Preview({ topic, mainColor, isProfile, setUserTopics, isPathPage, isCompleted }) {
+function Preview({ topic, mainColor, isProfile, setUserTopics, isPathPage, isCompleted, isHomepage }) {
     const questionsLengthRounder = !isProfile && !isPathPage ? Math.ceil(topic.questions.length / 10) * 10 : null;
 
     return (
         <div id={style.preview}>
-            <Link style={{ textDecoration: 'none' }} to={isProfile ? '#' : `/topic/${topic.id}/questions`}>
+            <Link style={{ textDecoration: 'none' }} to={isProfile || isHomepage ? '#' : `/topic/${topic.id}/questions`}>
                 <div id={style.imgPreview} style={{ backgroundImage: `url(${topic.mainImage})` }}>
                     {isProfile && !isPathPage && <PreviewActionsMenu topic={topic} setUserTopics={setUserTopics} />}
                 </div>

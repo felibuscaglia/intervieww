@@ -6,9 +6,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { TwitterShareButton, FacebookShareButton } from 'react-share';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { getTopics } from '../../redux/actions/index';
 
-function Homepage({ topics, setTopics }) {
+function Homepage({ topics, setTopics, user }) {
 
     useEffect(() => {
         if (topics.length === 0) {
@@ -18,7 +19,7 @@ function Homepage({ topics, setTopics }) {
 
     return (
         <div>
-            <Header fontColor={ '#003e4f' } />
+            <Header fontColor={'#003e4f'} />
             <div id={style.welcome} className='displayFlexColumn'>
                 <h1 id={style.mainTitle}>Master the technical interview</h1>
                 <span id={style.mainSpan}>All the questions you need to know to get your ideal job.</span>
@@ -37,8 +38,18 @@ function Homepage({ topics, setTopics }) {
                     </FacebookShareButton>
                 </div>
             </div>
-            <div id={style.interviewContainer}>
-                {topics.map((topic, index) => <Preview key={index} topic={topic} />)}
+            <div id={style.mainContainer}>
+                <div id={style.interviewContainer}>
+                    {topics.slice(0, user.name ? topics.length : 20).map((topic, index) => <Preview key={index} topic={topic} />)}
+                </div>
+                {!user.name &&
+                    <div id={style.mainNonUserContainer}>
+                        <span id={style.unlock}>⚡ Unlock {topics.length - 20}+ topics and more benefits. <Link to='/signup' id={style.link}>Join now</Link>.</span>
+                        <div id={style.blurredContainer}>
+                            {topics.slice(20).map((topic, index) => <Preview topic={topic} key={index} isHomepage={true} />)}
+                        </div>
+                    </div>
+                }
             </div>
         </div>
     )
@@ -46,7 +57,8 @@ function Homepage({ topics, setTopics }) {
 
 function mapStateToProps(state) {
     return {
-        topics: state.topics
+        topics: state.topics,
+        user: state.user
     }
 }
 

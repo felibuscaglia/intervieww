@@ -4,14 +4,14 @@ import { Toast } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { displayToast } from '../../redux/actions/index';
 
-function ToastPopUp({ showToast, displayToast }) {
+function ToastPopUp({ showToast, displayToast, position, header, body }) {
     return (
-        <div id={style.toast}>
+        <div style={{ [position]: '25px' }} id={style.toast}>
             <Toast show={showToast} onClose={() => displayToast(false)} >
                 <Toast.Header id={style.header}>
-                    <strong className="mr-auto">You've already added it to your list</strong>
+                    <strong className="mr-auto">{header}</strong>
                 </Toast.Header>
-                <Toast.Body id={style.body}>Go to the <i>Keep Learning</i> section and continue it.</Toast.Body>
+                <Toast.Body dangerouslySetInnerHTML={{ __html: body }} id={style.body}></Toast.Body>
             </Toast>
         </div>
     )

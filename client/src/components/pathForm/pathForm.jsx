@@ -4,7 +4,6 @@ import SelectedTopic from '../../components/selectedTopic/selectedTopic';
 import * as axios from 'axios';
 import { BlockPicker } from 'react-color';
 import { Hint } from 'react-autocomplete-hint';
-import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowAltCircleLeft } from '@fortawesome/free-solid-svg-icons';
 import { useHistory } from 'react-router-dom';
@@ -97,10 +96,4 @@ function PathForm({ setSelectedOption, topics }) {
     )
 }
 
-function mapStateToProps(state) {
-    return {
-        topics: state.topics
-    }
-}
-
-export default connect(mapStateToProps, null)(PathForm);
+export default PathForm;

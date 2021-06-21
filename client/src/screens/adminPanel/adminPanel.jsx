@@ -7,13 +7,13 @@ import QuestionForm from '../../components/questionForm/questionForm';
 import { connect } from 'react-redux';
 import { getTopics } from '../../redux/actions/index';
 
-function AdminPanel() {
+function AdminPanel({ topics, setTopics }) {
     const [selectedOption, setSelectedOption] = useState(null);
 
     useEffect(() => {
-     getTopics();   
+        if (!topics.length) setTopics();
     }, []);
-    
+
     return (
         <div>
             <Header fontColor={'#003e4f'} />
@@ -29,17 +29,23 @@ function AdminPanel() {
                     </div>
                 }
                 {selectedOption === 'Topic' && <TopicForm setSelectedOption={setSelectedOption} />}
-                {selectedOption === 'Path' && <PathForm setSelectedOption={setSelectedOption} />}
-                {selectedOption === 'Question' && <QuestionForm setSelectedOption={setSelectedOption} />}
+                {selectedOption === 'Path' && <PathForm topics={topics} setSelectedOption={setSelectedOption} />}
+                {selectedOption === 'Question' && <QuestionForm topics={topics} setSelectedOption={setSelectedOption} />}
             </div>
         </div>
     )
 }
 
-function mapDispatchToProps(dispatch) {
+function mapStateToProps(state) {
     return {
-        getTopics: () => dispatch(getTopics())
+        topics: state.topics
     }
 }
 
-export default connect(null, mapDispatchToProps)(AdminPanel);
+function mapDispatchToProps(dispatch) {
+    return {
+        setTopics: () => dispatch(getTopics())
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(AdminPanel);

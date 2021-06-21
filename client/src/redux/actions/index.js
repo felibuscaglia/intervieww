@@ -10,14 +10,14 @@ export const SET_SUGGESTIONS = 'SET_SUGGESTIONS';
 export function getSuggestions(query) {
     return function (dispatch) {
         axios.get(`/search?query=${query}`)
-            .then (suggestions => dispatch({ type: SET_SUGGESTIONS, payload: suggestions.data }))
+            .then(suggestions => dispatch({ type: SET_SUGGESTIONS, payload: suggestions.data }))
             .catch(err => console.error(err))
     }
 }
 
 export function setUser(user) {
     return { type: SET_USER, payload: user };
-} 
+}
 
 export function logOut() {
     return { type: LOG_OUT }
@@ -27,15 +27,15 @@ export function getTopics() {
     return function (dispatch) {
         axios.get('/topic')
             .then(topics => dispatch({ type: SET_TOPICS, payload: topics.data }))
-            .catch(err => console.log(err));
+            .catch(err => console.error(err));
     }
 }
 
 export function addTopicToUser(ids) {
     return function (dispatch) {
         axios.post(`/user/${ids.user}/topic/${ids.topic}`)
-            .then (user => dispatch({ type: SET_USER, payload: user.data }))
-            .catch (err => console.log(err));
+            .then(user => dispatch({ type: SET_USER, payload: user.data }))
+            .catch(err => console.log(err));
     }
 }
 

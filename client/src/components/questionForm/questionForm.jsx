@@ -4,7 +4,6 @@ import * as axios from 'axios';
 import Editor from '../textEditor/textEditor';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowAltCircleLeft } from '@fortawesome/free-solid-svg-icons';
-import { connect } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
 function QuestionForm({ setSelectedOption, topics }) {
@@ -47,15 +46,9 @@ function QuestionForm({ setSelectedOption, topics }) {
                 </div>
                 <Editor setInput={setInput} input={input} />
             </div>
-            <button onClick={ handleSubmit} id={style.postItBtn}>Post it</button>
+            <button onClick={handleSubmit} id={style.postItBtn}>Post it</button>
         </div>
     )
 }
 
-function mapStateToProps(state) {
-    return {
-        topics: state.topics
-    }
-}
-
-export default connect(mapStateToProps, null)(QuestionForm);
+export default QuestionForm;
